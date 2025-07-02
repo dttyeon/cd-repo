@@ -1,0 +1,4 @@
+web:
+  image:
+    repository: asia-northeast3-docker.pkg.dev/dttyeon/ay-repo/web
+    tag: "1.0.0-20250628"
