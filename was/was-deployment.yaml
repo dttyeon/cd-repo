@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: was
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: was
+  template:
+    metadata:
+      labels:
+        app: was
+    spec:
+      serviceAccountName: my-ksa
+      containers:
+      - name: was
+        image: "{{ .was.Values.image.repository }}:{{ .was.Values.image.tag }}"
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+              
+      - name: cloudsql-proxy
+        image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.17.0
+        args:
+          - "--structured-logs"
+          - "--port=3306"
+          - "kdt1-finalproject:asia-northeast3:ay-sql-mysql"
+        securityContext:
+          runAsNonRoot: true
