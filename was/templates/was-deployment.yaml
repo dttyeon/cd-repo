@@ -15,7 +15,7 @@ spec:
       serviceAccountName: my-ksa
       containers:
       - name: was
-        image: "{{ .was.Values.image.repository }}:{{ .was.Values.image.tag }}"
+        image: "{{ .Values.was.image.repository }}:{{ .Values.was.image.tag }}"
         ports:
         - containerPort: 8080
         resources:
