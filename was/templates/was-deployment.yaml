@@ -31,6 +31,7 @@ spec:
         args:
           - "--structured-logs"
           - "--port=3306"
+          - "--private-ip"
           - "kdt1-finalproject:asia-northeast3:ay-sql-mysql"
         securityContext:
           runAsNonRoot: true
