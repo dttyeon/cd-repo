@@ -4,11 +4,9 @@ metadata:
   name: web-ingress
   annotations:
     kubernetes.io/ingress.class: "gce"
-    networking.gke.io/managed-certificates: "ay-cert"
 spec:
   rules:
-  - host: www.hirundos.store
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
