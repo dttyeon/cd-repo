@@ -12,7 +12,7 @@ spec:
       labels:
         app: was
     spec:
-      serviceAccountName: my-ksa
+      serviceAccountName: ayvet-dev-ksa
       containers:
       - name: was
         image: "{{ .Values.was.image.repository }}:{{ .Values.was.image.tag }}"
@@ -32,6 +32,6 @@ spec:
           - "--structured-logs"
           - "--port=3306"
           - "--private-ip"
-          - "kdt1-finalproject:asia-northeast3:ay-sql-mysql"
+          - "kdt1-finalproject:asia-northeast3:ayvet-dev-mysql"
         securityContext:
           runAsNonRoot: true
