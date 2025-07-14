@@ -35,7 +35,7 @@ spec:
         - name: OKIND
           value: #DeploymentName
         - name: license
-          value: x605jqo8dojgo-x1m4j2p79bf9i5-z6hu2m1fc78sig
+          value: x605jsk8ecjtg-x4aupov7b0vinc-z546c87qai9fvh
         - name: whatap.server.host
           value: 13.124.11.223/13.209.172.35
         - name: whatap.micro.enabled
