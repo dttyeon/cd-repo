@@ -47,6 +47,6 @@ spec:
           - "--structured-logs"
           - "--port=3306"
           - "--private-ip"
-          - "kdt1-finalproject:asia-northeast3:ayvet-dev-mysql"
+          - "kdt1-finalproject:asia-northeast3:ayvet-dev-db"
         securityContext:
           runAsNonRoot: true
