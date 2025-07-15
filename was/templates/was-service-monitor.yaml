@@ -3,7 +3,7 @@ kind: ServiceMonitor
 metadata:
   name: was-svc-m
   labels:
-    release: prometheus
+    release: prometheus-stack
 spec:
   selector:
     matchLabels:
