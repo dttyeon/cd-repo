@@ -25,21 +25,6 @@ spec:
           limits:
             cpu: "500m"
             memory: "512Mi"
-        env:
-        - name: NODE_IP
-          valueFrom: {fieldRef: {fieldPath: status.hostIP}}
-        - name: NODE_NAME
-          valueFrom: {fieldRef: {fieldPath: spec.nodeName}}
-        - name: POD_NAME
-          valueFrom: {fieldRef: {fieldPath: metadata.name}}
-        - name: OKIND
-          value: #DeploymentName
-        - name: license
-          value: x605jtg85stmo-x6ea8v8fqh7fne-x7huuou1bonjbu
-        - name: whatap.server.host
-          value: 13.124.11.223/13.209.172.35
-        - name: whatap.micro.enabled
-          value: "true"    
               
       - name: cloudsql-proxy
         image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.17.0
