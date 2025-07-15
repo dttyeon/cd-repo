@@ -1,4 +1,4 @@
 was:
   image:
     repository: asia-northeast3-docker.pkg.dev/kdt1-finalproject/ay-repo/was
-    tag: "1.0.5-20250715"
+    tag: "1.0.6-20250715"
