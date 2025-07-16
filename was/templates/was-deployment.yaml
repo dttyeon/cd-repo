@@ -12,6 +12,7 @@ spec:
       labels:
         app: was
     spec:
+      hostNetwork: true
       serviceAccountName: ayvet-dev-ksa
       containers:
       - name: was
