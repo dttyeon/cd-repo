@@ -50,5 +50,6 @@ spec:
         - name: jmx-config
           configMap:
             name: jmx-config
+            items:
               - key: jmx-exporter.yaml
                 path: jmx-exporter.yaml
