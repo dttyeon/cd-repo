@@ -38,7 +38,7 @@ spec:
           runAsNonRoot: true
 
       - name: jmx-exporter
-        image: prom/jmx-exporter:0.20.0
+        image: bitnami/jmx-exporter:1.3.0
         ports:
         - containerPort: 9404
         volumeMounts:
