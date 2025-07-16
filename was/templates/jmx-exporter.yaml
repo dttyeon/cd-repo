@@ -2,6 +2,8 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: jmx-exporter-config
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 data:
   jmx-exporter.yaml: |
     startDelaySeconds: 0
