@@ -1,7 +1,7 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: was-svc-m
+  name: was-jmx-monitor
   labels:
     release: prometheus-stack
 spec:
@@ -12,6 +12,7 @@ spec:
     matchNames:
       - default
   endpoints:
-    - port: http
-      path: /actuator/prometheus
+    - port: jmx  
+      path: /
       interval: 30s
+
