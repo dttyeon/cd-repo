@@ -44,8 +44,9 @@ spec:
         - name: jmx-config
           mountPath: /config
         args:
-        - "--config.file=/config/jmx-exporter.yaml"
-        - "127.0.0.1:1099"
+          - 9404
+          - /config/jmx-exporter.yaml
+          - 127.0.0.1:1099
       volumes:
         - name: jmx-config
           configMap:
