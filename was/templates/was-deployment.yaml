@@ -47,14 +47,14 @@ spec:
         args:
         - "--config.file=/config/jmx-exporter.yaml"
         - "127.0.0.1:1099"
-    volumes:
-      - name: jmx-config
-        configMap:
-          items:
-            - key: jmx-exporter.yaml
-              path: jmx-exporter.yaml
-              content: | 
-                startDelaySeconds: 0
-                hostPort: 127.0.0.1:1099
-                rules:
-                  - pattern: ".*"
+  volumes:
+    - name: jmx-config
+      configMap:
+        items:
+          - key: jmx-exporter.yaml
+            path: jmx-exporter.yaml
+            content: | 
+              startDelaySeconds: 0
+              hostPort: 127.0.0.1:1099
+              rules:
+                - pattern: ".*"
